@@ -1,0 +1,41 @@
+2024-10-09 14:50:30 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 14:51:18 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 14:52:19 - log.py:248 [WARNING] Unauthorized: /inventory_app/user/
+2024-10-09 14:52:40 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 14:54:17 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 14:58:10 - log.py:248 [WARNING] Bad Request: /inventory_app/register/
+2024-10-09 14:58:19 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:07:39 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:08:37 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:25:42 - log.py:248 [WARNING] Bad Request: /inventory_app/register/
+2024-10-09 15:26:16 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:32:21 - log.py:248 [WARNING] Bad Request: /inventory_app/register/
+2024-10-09 15:32:34 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:32:40 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:42:55 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:43:30 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:43:58 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 15:55:14 - log.py:248 [WARNING] Bad Request: /inventory_app/login/
+2024-10-09 16:07:34 - log.py:248 [WARNING] Unauthorized: /inventory_app/user/
+2024-10-09 16:07:54 - log.py:248 [WARNING] Unauthorized: /inventory_app/user/
+2024-10-09 16:08:45 - log.py:248 [WARNING] Not Found: /protected-endpoint/
+2024-10-09 16:12:02 - log.py:248 [WARNING] Not Found: /items/
+2024-10-09 16:14:18 - log.py:248 [WARNING] Unauthorized: /inventory_app/user/
+2024-10-09 16:15:25 - log.py:248 [WARNING] Unauthorized: /inventory_app/user/
+2024-10-09 16:16:59 - log.py:248 [WARNING] Method Not Allowed: /inventory_app/items/
+2024-10-09 16:17:32 - log.py:248 [ERROR] Internal Server Error: /inventory_app/items/create
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/inventory_app/items/create/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2024-10-09 17:05:47 - log.py:248 [WARNING] Not Found: /inventory_app/items/<item_id>/
+2024-10-09 17:05:56 - log.py:248 [WARNING] Method Not Allowed: /inventory_app/items/1/
+2024-10-09 17:07:24 - log.py:248 [WARNING] Method Not Allowed: /inventory_app/items/1/
+2024-10-09 17:07:48 - log.py:248 [WARNING] Method Not Allowed: /inventory_app/items/1/
+2024-10-09 17:10:02 - log.py:248 [WARNING] Unauthorized: /inventory_app/items/delete/1/

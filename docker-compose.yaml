@@ -1,0 +1,44 @@
+# docker-compose.yml
+
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=inventory_db_2
+      - POSTGRES_USER=inventory_user
+      - POSTGRES_PASSWORD=inventory_pass
+    networks:
+      - app-network
+
+  redis:
+    image: redis:latest
+    networks:
+      - app-network
+
+  django_api:
+    build: .
+   
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      - TESTING=True
+    depends_on:
+      - db
+      - redis
+    networks:
+      - app-network
+    volumes:
+      - ./log:/app/log
+  
+
+networks:
+  app-network:
+
+volumes:
+  postgres_data:
